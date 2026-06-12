@@ -1569,6 +1569,46 @@ body.is-hovering .cursor__dot { width: 0; height: 0; }
   grid-template-columns: 1fr;
   max-width: 520px;
 }
+.booking__contacts--triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.booking__contacts--triple .contact { min-width: 0; }
+.booking__contacts--triple .contact__value {
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: clamp(12px, 1.05vw, 17px);
+  letter-spacing: -0.015em;
+  white-space: nowrap;
+  display: block;
+  max-width: 100%;
+}
+@media (max-width: 820px) {
+  .booking__contacts--triple { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .booking__contacts--triple { grid-template-columns: 1fr; }
+  .booking__contacts--triple .contact__value { font-size: 16px; }
+}
+
+.booking__presskit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  padding: 22px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(93,139,255,0.22);
+  background:
+    radial-gradient(120% 200% at 0% 50%, rgba(93,139,255,0.10), transparent 60%),
+    rgba(255,255,255,0.025);
+}
+.booking__presskit-note {
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+  font-size: 10.5px;
+}
 .contact {
   display: flex;
   flex-direction: column;
